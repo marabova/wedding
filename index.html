@@ -1,27 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="author" href="humans.txt"> -->
+    <title>Wedding</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Wedding</title>
 </head>
 
 <body>
+<!--   <canvas>
+</canvas> -->
     <div class="wrapper">
-        <header>
-            <div class="sea_waves"></div>
-            <h1><img src="img/logo.png" alt="Svet and Mary logo" /></h1>
+       <header>
+         <!-- <h1>
+          <img src="img/logo.png" alt="header logo"/>
+      </h1> -->
+         <ul class="nav nav-tabs">
+            <li role="navigation" class="active"><a href="#home">Покана</a>
+            </li>
+            <li role="navigation"><a href="#info">Добре е да се знае</a>
+            </li>
+            <li role="navigation"><a href="#form">Попълни ме!</a>
+            </li>
+            <li role="navigation"><a href="#contacts">За въпроси</a>
+            </li>
+        </ul>
         </header>
-        <!-- /header -->
-        <div class="content-wrapper">
-            <div class="wooden_bar">
-                <div class="container">
-                </div>
-            </div>
+        <div class="clearfix">
         </div>
+        <div class="island">
+            <div class="content-wrapper">
+            <div class="tab-content">
+                <section role="tabpanel" class="tab-pane active" id="home">
+                <!-- <img src="img/logo.png" alt=""> -->
+                    <h2>Време е за парти</h2>
+                    <div class="content">
+                        <p>
+                            Здравейте, на 4 Септември 2016, ще има сватба в хотел Аполония ризорт, Созопол. Към момента са потвърдили Марияна Арабова (булката), Светослав Иванов (младоженеца), Десислава и Тодор (кумовете).
+                        </p>
+                        <p>
+                            Партито започва в 17:00 на плажа пред хотела, където ще си кажем "ДА!" След церомонията ще има време за чаша шампанско и снимки :) В 19:00 - хапване и пийване в ресторанта към хотела, където започва и купона :)
+                        </p>
+                        <p>
+                            Ще Ви очакваме :) !!!
+                        </p>
+                    </div>
+                </section>
+                <section role="tabpanel" class="tab-pane" id="info">
+                    <h2>Полезно да се знае</h2>
+                    <div class="content">
+                        <p>Настаняване:<br/>
+                           Ние сме се погрижили за нощувката в деня на сватбата. От вас се иска само да се забавлявате :) 
+                           Настаняването е в апартаменти. 
+                           Ако искате да поостанете преди или след сватбата цените са: 
+                           180лв - двуспален апартамент - до 5 възрастни;
+                           150лв - едноспален апартамент - до 3 възрастни;
+                           110лв - студио -  до 3 възрастни;
+                           Моля попълнете формата, така ще може да направим резервация вместо вас.
+                           <p>Подаръци</p>
+
+                    </p>
+                    </div>
+                </section>
+                <section role="tabpanel" class="tab-pane" id="form">
+                    <h2>Попълни ме</h2>
+                    <div class="content">
+                        <form action="index_submit" method="get" accept-charset="utf-8">
+                            <ul>
+                                <li>
+                                    <label for="myname">Моето име е:</label>
+                                    <input id="myname" type="text" name="myname" value="">
+                                </li>
+                                <li>
+                                    <fieldset>
+                                        <legend>Ще бъда там:</legend>
+                                        <input type="radio" name="presence" id="yes" value="1">
+                                        <label for="yes"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></label>
+                                        <input type="radio" name="presence" id="no" value="0">
+                                        <label for="no"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span></label>
+                                    </fieldset>
+                                </li>
+                                <li>
+                                    <fieldset>
+                                        <legend>Може да поостана и за:</legend>
+                                        <input type="checkbox" id="fr" name="stay" value="fr">
+                                        <label for="fr">Петък</label>
+                                        <br />
+                                        <input type="checkbox" id="sat" name="stay"  value="sat">
+                                        <label for="sat">Събота</label>
+                                        <br />
+                                         <input type="checkbox" id="sun" name="stay" checked="checked" value="sun">
+                                        <label for="sun">Неделя(чекнато по подразбиране :) </label>
+                                        <br />
+                                        <input type="checkbox" id="mon" name="stay"  value="mon">
+                                        <label for="acrylic">Понеделник</label>
+                                        <br />
+                                        <input type="checkbox" id="ts" name="stay" value="ts">
+                                        <label for="ts">Вторник</label>
+                                    </fieldset>
+                                </li>
+                                <li>
+                                    <fieldset>
+                                        <legend>Ще хапвам: </legend>
+                                        <input type="radio" name="food" id="fish" value="fish">
+                                        <label for="fish">Риба</label>
+                                        <input type="radio" name="food" id="chiken" value="chiken">
+                                        <label for="chiken">Пиле</label>
+                                    </fieldset>
+                                </li>
+                                <li>
+                                    <fieldset>
+                                        <legend>Ще пийвам: </legend>
+                                        <input type="checkbox" id="rac" name="drinks" value="рац">
+                                        <label for="rac">Ракия</label>
+                                        <br />
+                                        <input type="checkbox" id="vodka" name="drinks"  value="vodka">
+                                        <label for="vodka">Водка</label>
+                                        <br />
+                                         <input type="checkbox" id="sun" name="drinks"  value="sun">
+                                        <label for="sun">Уиски </label>
+                                        <br />
+                                        <input type="checkbox" id="mon" name="drinks"  value="mon">
+                                        <label for="acrylic">Вино</label>
+                                        <br />
+                                        <input type="checkbox" id="ts" name="drinks" value="ts">
+                                        <label for="ts">Бира</label>
+                                        <br />
+                                        <input type="checkbox" id="ts" name="drinks" value="ts">
+                                        <label for="ts">Вода</label>
+                                        <br />
+                                        <input type="checkbox" id="ts" name="drinks" value="ts">
+                                        <label for="ts">Нямам претенции</label>
+                                    </fieldset>
+                                </li>
+                                <li>  <input type="submit" value="Готово"/></li>    
+                            </ul>
+                        </form>
+                    </div>
+                </section>
+                <section role="tabpanel" class="tab-pane" id="contacts">
+                    <h2>За въпроси:</h2>
+                    <div class="content">
+                        <p></p>
+                    </div>
+                </section>
+            </div>
+        </div>  
+        </div>
+       
     </div>
 
-    <script type="text/javascript" src="js/init.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/init.js"></script>
 </body>
+
 </html>
