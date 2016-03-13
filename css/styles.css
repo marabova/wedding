@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Artemon';
+    src: url('../font/Artemon.eot?#iefix') format('embedded-opentype'), url('../font/Artemon.woff') format('woff'), url('../font/Artemon.ttf') format('truetype'), url('../font/Artemon.svg#Artemon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: url('../img/beach.jpg') repeat center center;
+    font-family: 'Artemon' !important;
+    color: #6a2d1d;
+    font-size: 18px;
+    line-height: 22px;
+}
+canvas{
+    margin: 0 auto;
+    display: block;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 1366px;
+    max-height: 768px;
+    margin: 0 auto;
+    display: none;
+    position: relative;  
+}
+
+.content-wrapper:before {
+    content: "";
+    background: url('../img/palm.png') no-repeat center center;
+    background-size: contain;
+    top: 4%;
+    width: 25%;
+    height: 25%;
+    display: block;
+    position: absolute;
+    z-index: 1000;
+}
+
+.content-wrapper {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 100%;
+    max-width: 768px;
+    height: 100%;
+    max-height: 600px;
+    padding: 10%;
+    background: url('../img/mask_back.png') no-repeat center top;
+    background-size: contain;
+}
+
+.tab-content {
+    position: relative;
+    max-height: 435px;
+    /*-webkit-transform: rotate(-10deg);
+       -moz-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+         -o-transform: rotate(-10deg);
+            transform: rotate(-10deg);*/
+    overflow-y: auto;
+}
+.tab-content>.tab-pane{
+    padding: 10%;
+}
+
+header {
+    position: absolute;
+    left: 5%;
+    width: 20%;
+    max-width: 590px;
+    height: 100%;
+    text-align: center;
+}
+
+.nav-tabs {
+    width: 100%;
+    border: 0;
+    position: relative;
+    /* display: table; */
+}
+
+.nav-tabs li {
+    float: none;
+    display: block;
+    background-image: url('http://api.thumbr.it/whitenoise-361x370.png?background=f0e4ccff&noise=948c94&density=37&opacity=21');
+    background-size: 100%;
+    margin: 10% 0;
+    padding: 6% 2%;
+    border-radius: 100%;
+    box-shadow: 0px 0px 25px 5px #fff;
+}
+
+.nav-tabs li:nth-child(2n) {
+    margin: 20% 30% 20% 0;
+}
+
+.nav-tabs li:nth-child(2n+1) {
+    margin: 10% 0 30% 30%;
+}
+
+.nav-tabs li a {
+    margin: 0;
+    border: 0;
+}
+
+.nav-tabs li a:hover,
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    margin: 0;
+    border: 0;
+    background: none;
+}
+
+/*form*/
+#form li{
+    margin:10px 0;
+    padding: 0 10px;
+}
+
+
+/* #### Mobile Phones Landscape #### */
+@media screen and (max-device-width: 800px){
+  /* some CSS here */
+    .wrapper {
+        max-width:100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    header {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+    .content-wrapper {
+        position: static;
+        -webkit-mask-box-image: none;
+        -mask-box-image: none;
+        -moz-mask-box-image: none;
+        -ms-mask-box-image: none;
+        padding: 5%;
+        width:100%;
+    }
+    .nav-tabs li {
+        padding: 1%;
+    }
+    .nav-tabs li:nth-child(2n+1),
+    .nav-tabs li:nth-child(2n) {
+        margin: 0;
+    }
+    .island:before {
+        left: 0;
+    }
+    .tab-content{
+        max-height: none;
+        height: auto;
+    }
+}
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-width: 480px) {
+    
+}
